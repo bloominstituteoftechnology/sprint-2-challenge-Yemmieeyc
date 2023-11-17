@@ -204,17 +204,25 @@
 
       // 👉 CHALLENGE 5
       function normalizePhoneNumber(string) {
-        console.log(string);
-        let template = "(XXX) XXX-XXXX";
-        for (let i = string.length - 1; i >= 0; i--) {}
+        let template = "(XXX) XXX-XXXX".split("");
+        let char = string.split("");
 
-        //   if (string is not correct length ) {
+        for (let j = template.length - 1; j >= 0; j--) {
+          if (char[i] === template[j]) {
+          }
+        }
 
-        //   return "type a 10-digit number"
-        // } else if (string is correct length) {
+        console.log(template.length);
 
-        //   return "invalid phone number"
-        // }
+        if (string.length !== 10) {
+          return "type a 10-digit number";
+        }
+
+        for (let k = 0; k < string.length; k++) {
+          if (string.length === 10 || typeof string === "number") {
+            return "invalid phone number";
+          }
+        }
 
         // 🧠 normalizePhoneNumber takes a string as its only argument, representing a ten-digit number
         // The function returns a string formatted as seen below
